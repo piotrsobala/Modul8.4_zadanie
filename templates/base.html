@@ -1,0 +1,17 @@
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}Wizytówka{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Witaj na mojej stronie domowej!</h1>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/F9MAAOSw5Ztad9c-/s-l1200.jpg" alt="zdjecie" style="width:250px;height:300px;">
+            </div>
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

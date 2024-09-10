@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Kontakt - Wizytówka{% endblock %}
+
+{% block content %}
+    <h2>Kontakt</h2>
+    <p>Imię: <strong>XYZ</strong></p>
+    <p>Nazwisko: <strong>XYZ</strong></p>
+    <ul>
+        <li>email: ...</li>
+        <li>telefon: ...</li>
+    </ul>
+
+    <h2>Wyślij wiadomość</h2>
+    <form action="/mypage/send-message" method="POST" style="center">
+        <textarea id="message" name="message" rows="5" placeholder="Wprowadź treść wiadomości" required></textarea>
+        <button type="submit">Wyślij</button>
+    </form>
+
+    {% if success %}
+        <p style="color: green;">Wiadomość została wysłana!</p>
+        <p><strong>Treść wiadomości:</strong> {{ message }}</p>
+    {% endif %}
+{% endblock %}
